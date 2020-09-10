@@ -14,10 +14,10 @@
                 <a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a>
             </h2>
             <p class="price">${{ product.price }}</p>
-            <form class="input-group" action="{% url 'cart:cart_add' product.id %}" method="post">
+            <form class="form-inline" action="{% url 'cart:cart_add' product.id %}" method="post">
                 {{ cart_product_form.quantity }}
                 {{ cart_product_form.update }}
-                <button class="btn btn-success input-group-append" type="submit">Add to cart</button>
+                <button class="btn btn-success" type="submit">Add to cart</button>
                 {% csrf_token %}
             </form>
             {{ product.description|linebreaks }}

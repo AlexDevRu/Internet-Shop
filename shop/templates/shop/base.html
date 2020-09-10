@@ -4,6 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}My shop{% endblock %}</title>
     {% bootstrap_css %}
     {% bootstrap_javascript jquery='full' %}
@@ -16,7 +17,7 @@
     <div id="subheader" class="bg-light text-right pt-3 pb-3 pr-3">
         <div class="cart">Your cart is empty.</div>
     </div>
-    <div id="content" class="pt-3">
+    <div id="content" class="p-3">
         {% block content %}{% endblock %}
     </div>
 </body>

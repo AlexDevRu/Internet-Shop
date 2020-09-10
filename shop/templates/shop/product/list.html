@@ -28,15 +28,15 @@
             <h1 class="mb-3">{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
             <div class="card-columns">
                 {% for product in products %}
-                    <div class="item card p-4">
+                    <div class="card text-center pb-3">
                         <a href="{{ product.get_absolute_url }}">
                             <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}"
                                  class="card-img-top">
                         </a>
-                        <h4 class="card-title text-center">
+                        <h4 class="card-title">
                             <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
                         </h4>
-                        <p class="card-text text-center font-weight-bold">
+                        <p class="card-text font-weight-bold">
                             ${{ product.price }}
                         </p>
                     </div>
